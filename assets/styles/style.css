@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Tiny5&family=Viga&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pos-font: "Dancing Script", cursive;
+  --normal-font: "Viga", sans-serif;
+  --text-size: 2rem;
+  --bg-color: #8ca4b5;
+  --container-bg: #285473;
+  --font-color: #082c50;
+  --border-color: #30749e;
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
+    url("../images/neon2.jpg");
+  background-size: cover;
+  background-position: center;
+
+  font-family: var(--normal-font);
+  color: #ffe5f9;
+  text-shadow: #f37488 1px 0 15px;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid rgba(146, 70, 137, 0.36);
+  width: auto;
+  height: auto;
+  text-align: center;
+  border-radius: 24px;
+
+  /* glassmorphism */
+  background: rgba(146, 70, 137, 0.17);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.3px);
+  -webkit-backdrop-filter: blur(6.3px);
+}
+h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  letter-spacing: 9px;
+  font-family: "Bebas Neue", sans-serif;
+  margin-left: 12px;
+  font-weight: 500;
+}
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 15px;
+}
+.digit-clock {
+  /* background-color: #082c50; */
+  border-radius: 15px;
+  width: 7rem;
+  height: 3rem;
+  font-size: 2rem;
+}
+.text {
+  /* background-color: #082c50; */
+  text-transform: uppercase;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.2rem;
+}
+#ampm {
+  margin-top: 70%;
+  font-size: 1.8rem;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+@media (max-width: 680px) {
+  h2 {
+    font-size: 35px;
+  }
+  .container {
+    align-items: center;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    max-width: 25rem;
+  }
+
+  .clock-container {
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .digit-clock {
+    /* width: 10rem; */
+    height: 4rem;
+    font-size: 3rem;
+  }
+
+  .text {
+    width: 5rem;
+    padding-top: 10%;
+    font-size: 1.2rem;
+  }
+
+  #ampm {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .digit-clock {
+    width: 6rem;
+    height: 3rem;
+    font-size: 1.5rem;
+  }
+
+  .text {
+    /* background-color: #082c50; */
+    padding-top: 5%;
+    font-size: 0.9rem;
+  }
+
+  #ampm {
+    font-size: 1.2rem;
+  }
+}
